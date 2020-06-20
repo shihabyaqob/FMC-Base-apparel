@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  color: hsl(0, 93%, 68%);
+  background-image: url(images/bg-pattern-desktop.svg);
+  margin: 0;
+  font-size: 16px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+.side-right {
+  background-image: url(images/hero-desktop.jpg);
+  background-size: cover;
+  width: 610px;
+  height: 100%;
+}
+.side-left {
+  margin-left: 160px;
+  margin-right: 220px;
+  width: 830px;
+}
+
+.logo {
+  margin-top: 30px;
+  margin-bottom: 140px;
+}
+.bg-mobile {
+  display: none;
+}
+h1 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 60px;
+  color: hsl(0, 6%, 24%);
+  margin-bottom: 40px;
+  letter-spacing: 15px;
+  transform: translateX(-100%);
+  animation: fade-in 2s ease-in-out forwards;
+}
+@keyframes fade-in {
+  to {
+    transform: translateY(0);
+  }
+}
+span {
+  color: hsl(0, 36%, 70%);
+  font-weight: 300;
+}
+p {
+  color: hsl(0, 36%, 70%);
+  line-height: 25px;
+  animation: fade-in-p 2s ease-in-out 2s both;
+}
+@keyframes fade-in-p {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+.form-group {
+  position: relative;
+  margin-bottom: 100px;
+}
+input {
+  width: 100%;
+  height: 55px;
+  border-radius: 50px;
+  border: 1px solid;
+  padding: 20px;
+  margin-bottom: 10px;
+  margin-top: 50px;
+}
+input:focus {
+  outline: none;
+  border: 2px solid hsl(0, 93%, 68%);
+}
+button {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 100px;
+  height: 55px;
+  border-radius: 100px;
+  background-color: hsl(0, 36%, 70%);
+  border: 1px solid hsl(0, 36%, 70%);
+  box-shadow: 1px 5px 5px hsl(0, 36%, 70%);
+}
+button:focus {
+  outline: none;
+  border: 2px solid hsl(0, 93%, 68%);
+}
+small {
+  margin-left: 40px;
+  opacity: 0.7;
+}
+@media (max-width: 375px) {
+  .bg-mobile {
+    display: block;
+  }
+  .side-right {
+    display: none;
+  }
+  .side-left {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+    width: 100%;
+  }
+  .form-group {
+    margin-left: 15px;
+  }
+  .logo {
+    display: block;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  h1 {
+    margin-top: 50px;
+    padding-left: 30px;
+    margin-bottom: 0;
+    font-size: 40px;
+  }
+  p {
+    margin-bottom: 0;
+    padding: 10px;
+  }
+}
